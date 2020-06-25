@@ -1,19 +1,23 @@
 package com.company.lesson4;
 
 import java.util.Scanner;
-
-public class Main {
-
-    public static void main(String[] args) {
-
-        int[] userNumbers = new int[3];
-        System.out.println("Enter three numbers: ");
-        Scanner numb = new Scanner(System.in);
-
-        for (int i = 0; i < userNumbers.length; i++) {
-            userNumbers[i] = numb.nextInt();
-
-        }
-        System.out.println(userNumbers[0] + userNumbers[1] + userNumbers[2] + " - This is the summ of all elements!" );
-    }
+public class Main
+{
+	public static void main(String[] args) {
+	   int summ = 0;
+	   Scanner arrSize = new Scanner (System.in);
+	   System.out.print("Enter size for array: ");
+	   int size = arrSize.nextInt();
+	   int[] arrOfNumb = new int[size];
+	   System.out.println("Enter array`s numbers: ");
+	   for (int i = 0; i < arrOfNumb.length; i++){
+	       arrOfNumb[i] = arrSize.nextInt();
+	       }
+	       for ( int number : arrOfNumb) {
+	           summ += number;
+	       }
+	  System.out.println("Array`s numbers (summ): " + summ);
+	   
+    
+	}    
 }
